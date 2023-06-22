@@ -4,7 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.Write(" Enter number: ");
+            int number=int.Parse(Console.ReadLine());
+            Thread thread = new Thread(() => NUMBERall(number));
+            thread.Start();
+        }
+        public static void NUMBERall(int number)
+        {
+            for(int i = 0; i < number; i++)
+            {
+                Console.Write(i+"  ");
+            }
         }
     }
 }
